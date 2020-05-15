@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8FEC3E0A4F385AEC5A8155D7 /* Pods_VLCSwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2954A556C13CBFE5086BAAC4 /* Pods_VLCSwiftUI.framework */; };
 		98E41E94246F35DD00DAFFD8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E41E93246F35DD00DAFFD8 /* AppDelegate.swift */; };
 		98E41E96246F35DD00DAFFD8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E41E95246F35DD00DAFFD8 /* SceneDelegate.swift */; };
 		98E41E98246F35DD00DAFFD8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E41E97246F35DD00DAFFD8 /* ContentView.swift */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D9464146F3179E7BFC1B13C /* Pods-VLCSwiftUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VLCSwiftUI.debug.xcconfig"; path = "Target Support Files/Pods-VLCSwiftUI/Pods-VLCSwiftUI.debug.xcconfig"; sourceTree = "<group>"; };
+		2954A556C13CBFE5086BAAC4 /* Pods_VLCSwiftUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VLCSwiftUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		98E41E90246F35DD00DAFFD8 /* VLCSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VLCSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98E41E93246F35DD00DAFFD8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		98E41E95246F35DD00DAFFD8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,8 @@
 		98E41E9C246F35DF00DAFFD8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		98E41E9F246F35DF00DAFFD8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		98E41EA1246F35DF00DAFFD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		98E41EA7246F36B700DAFFD8 /* VLCSwiftUI-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VLCSwiftUI-Bridging-Header.h"; sourceTree = "<group>"; };
+		BB26D3C6858C6C838BE0FABE /* Pods-VLCSwiftUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VLCSwiftUI.release.xcconfig"; path = "Target Support Files/Pods-VLCSwiftUI/Pods-VLCSwiftUI.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +36,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FEC3E0A4F385AEC5A8155D7 /* Pods_VLCSwiftUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		669AC6539985F03C47AC958A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2954A556C13CBFE5086BAAC4 /* Pods_VLCSwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6A72610ED3DD9E61DEBF0EE1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0D9464146F3179E7BFC1B13C /* Pods-VLCSwiftUI.debug.xcconfig */,
+				BB26D3C6858C6C838BE0FABE /* Pods-VLCSwiftUI.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		98E41E87246F35DD00DAFFD8 = {
 			isa = PBXGroup;
 			children = (
 				98E41E92246F35DD00DAFFD8 /* VLCSwiftUI */,
 				98E41E91246F35DD00DAFFD8 /* Products */,
+				6A72610ED3DD9E61DEBF0EE1 /* Pods */,
+				669AC6539985F03C47AC958A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,6 +88,7 @@
 				98E41E9E246F35DF00DAFFD8 /* LaunchScreen.storyboard */,
 				98E41EA1246F35DF00DAFFD8 /* Info.plist */,
 				98E41E9B246F35DF00DAFFD8 /* Preview Content */,
+				98E41EA7246F36B700DAFFD8 /* VLCSwiftUI-Bridging-Header.h */,
 			);
 			path = VLCSwiftUI;
 			sourceTree = "<group>";
@@ -82,6 +108,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 98E41EA4246F35DF00DAFFD8 /* Build configuration list for PBXNativeTarget "VLCSwiftUI" */;
 			buildPhases = (
+				F26372337C57EAB0D71ADDC6 /* [CP] Check Pods Manifest.lock */,
 				98E41E8C246F35DD00DAFFD8 /* Sources */,
 				98E41E8D246F35DD00DAFFD8 /* Frameworks */,
 				98E41E8E246F35DD00DAFFD8 /* Resources */,
@@ -107,6 +134,7 @@
 				TargetAttributes = {
 					98E41E8F246F35DD00DAFFD8 = {
 						CreatedOnToolsVersion = 11.4.1;
+						LastSwiftMigration = 1140;
 					};
 				};
 			};
@@ -140,6 +168,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F26372337C57EAB0D71ADDC6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VLCSwiftUI-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		98E41E8C246F35DD00DAFFD8 /* Sources */ = {
@@ -282,8 +335,10 @@
 		};
 		98E41EA5246F35DF00DAFFD8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D9464146F3179E7BFC1B13C /* Pods-VLCSwiftUI.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"VLCSwiftUI/Preview Content\"";
 				DEVELOPMENT_TEAM = ZX7GUMJ35C;
@@ -295,6 +350,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tigerhood.VLCSwiftUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "VLCSwiftUI/VLCSwiftUI-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -302,8 +359,10 @@
 		};
 		98E41EA6246F35DF00DAFFD8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB26D3C6858C6C838BE0FABE /* Pods-VLCSwiftUI.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"VLCSwiftUI/Preview Content\"";
 				DEVELOPMENT_TEAM = ZX7GUMJ35C;
@@ -315,6 +374,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tigerhood.VLCSwiftUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "VLCSwiftUI/VLCSwiftUI-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

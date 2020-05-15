@@ -1,21 +1,58 @@
-//
-//  ContentView.swift
-//  VLCSwiftUI
-//
-//  Created by Daniel Amarante on 5/15/20.
-//  Copyright © 2020 Tigerhood. All rights reserved.
-//
-
 import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, World!")
+        Player().frame(width: nil, height: 200, alignment: .center)
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
+private struct Player: UIViewControllerRepresentable {
+    func makeUIViewController(context: UIViewControllerRepresentableContext<Player>) -> PlaybackViewController {
+        let controller = PlaybackViewController()
+        return controller
+    }
+
+    func updateUIViewController(_ uiViewController: PlaybackViewController, context: UIViewControllerRepresentableContext<Player>) {}
+}
+
+class PlaybackViewController: UIViewController {
+    let mediaURL = "rtsp://wowzaec2demo.streamlock.net/vod/mp4:BigBuckBunny_115k.mov"
+
+    @IBOutlet var movieView: UIView!
+
+    var mediaPlayer = VLCMediaPlayer()
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupMediaPLayer()
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        mediaPlayer.play()
+    }
+
+    func setupMediaPLayer() {
+        mediaPlayer.delegate = self
+        mediaPlayer.drawable = view
+        mediaPlayer.media = VLCMedia(url: URL(string: mediaURL)!)
+    }
+
+    @IBAction func handlePlayPause(_ sender: UIButton) {
+        if mediaPlayer.isPlaying {
+            mediaPlayer.pause()
+            sender.isSelected = true
+        } else {
+            mediaPlayer.play()
+            sender.isSelected = false
+        }
+    }
+}
+
+extension PlaybackViewController: VLCMediaPlayerDelegate {
+    func mediaPlayerStateChanged(_ aNotification: Notification!) {
+        if mediaPlayer.state == .stopped {
+            dismiss(animated: true, completion: nil)
+        }
     }
 }
