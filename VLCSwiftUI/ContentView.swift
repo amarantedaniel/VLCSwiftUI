@@ -18,8 +18,6 @@ private struct Player: UIViewControllerRepresentable {
 class PlaybackViewController: UIViewController {
     let mediaURL = "rtsp://wowzaec2demo.streamlock.net/vod/mp4:BigBuckBunny_115k.mov"
 
-    @IBOutlet var movieView: UIView!
-
     var mediaPlayer = VLCMediaPlayer()
 
     override func viewDidLoad() {
@@ -36,16 +34,6 @@ class PlaybackViewController: UIViewController {
         mediaPlayer.delegate = self
         mediaPlayer.drawable = view
         mediaPlayer.media = VLCMedia(url: URL(string: mediaURL)!)
-    }
-
-    @IBAction func handlePlayPause(_ sender: UIButton) {
-        if mediaPlayer.isPlaying {
-            mediaPlayer.pause()
-            sender.isSelected = true
-        } else {
-            mediaPlayer.play()
-            sender.isSelected = false
-        }
     }
 }
 
