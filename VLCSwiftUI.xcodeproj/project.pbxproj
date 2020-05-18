@@ -341,14 +341,15 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"VLCSwiftUI/Preview Content\"";
-				DEVELOPMENT_TEAM = ZX7GUMJ35C;
+				DEVELOPMENT_TEAM = 6425JYU666;
+				ENABLE_BITCODE = NO;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = VLCSwiftUI/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tigerhood.VLCSwiftUI;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tigerhood2.VLCSwiftUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "VLCSwiftUI/VLCSwiftUI-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -366,6 +367,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"VLCSwiftUI/Preview Content\"";
 				DEVELOPMENT_TEAM = ZX7GUMJ35C;
+				ENABLE_BITCODE = NO;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = VLCSwiftUI/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
